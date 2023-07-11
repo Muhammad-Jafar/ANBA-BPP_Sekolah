@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.payment.SendPaymentFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        style="@style/CustomAppBar"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/paymentToolbar"
+            style="@style/CustomToolbar"
+            app:navigationIcon="@drawable/ic_close" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationSuccess"
+        android:layout_width="172dp"
+        android:layout_height="172dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/success_state" />
+
+    <TextView
+        android:id="@+id/successTitle"
+        style="@style/HeadingTitle"
+        android:layout_marginTop="16dp"
+        android:text="@string/selamat"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animationSuccess" />
+
+    <TextView
+        android:id="@+id/successContent"
+        style="@style/BodyContent"
+        android:text="@string/permintaan_pembayaran_berhasil_dibuat"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/successTitle" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.Material3.CardView.Elevated"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/successContent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Material3.Corner.Top">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/vaTitle"
+                style="@style/BodyTitle"
+                android:text="@string/berikut_nomor_virtual_account_untuk_menyelesaikan_pembayaran_anda"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/vaCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/vaTitle"
+                app:layout_constraintStart_toStartOf="@+id/vaTitle"
+                app:layout_constraintTop_toBottomOf="@+id/vaTitle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:id="@+id/vaContent"
+                        style="@style/HeadingApp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="997975664646464" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/amountTitle"
+                style="@style/BodyTitle"
+                android:layout_marginTop="16dp"
+                android:text="@string/dengan_jumlah_pembayaran_sebesar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vaCard" />
+
+            <TextView
+                android:id="@+id/amountContent"
+                style="@style/HeadingTitle"
+                app:layout_constraintEnd_toEndOf="@+id/amountTitle"
+                app:layout_constraintStart_toStartOf="@+id/amountTitle"
+                app:layout_constraintTop_toBottomOf="@+id/amountTitle"
+                tools:text="Rp. 70.000,00 " />
+
+            <TextView
+                android:id="@+id/expireTitle"
+                style="@style/BodyContent"
+                android:layout_marginTop="32dp"
+                android:text="@string/expire_limit_time"
+                app:layout_constraintEnd_toEndOf="@+id/amountContent"
+                app:layout_constraintStart_toStartOf="@+id/amountContent"
+                app:layout_constraintTop_toBottomOf="@+id/amountContent" />
+
+            <TextView
+                android:id="@+id/expireContentDesc"
+                style="@style/BodyContent"
+                android:layout_width="256dp"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/expire_desc"
+                app:layout_constraintTop_toBottomOf="@+id/expireTitle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/backToHome"
+                style="@style/CustomFilledButton"
+                android:text="@string/kembali_ke_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

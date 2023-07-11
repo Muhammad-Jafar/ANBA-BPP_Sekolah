@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionGroup="true"
+    tools:context=".ui.main.profile.ProfileFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        style="@style/CustomAppBar"
+        android:background="?attr/colorSecondaryContainer"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/profileToolbar"
+            style="@style/CustomToolbar"
+            app:layout_collapseMode="pin"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="@string/my_profile" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/colorSecondaryContainer"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Material3.Corner.Bottom" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatarPic"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="?attr/colorSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
+        app:srcCompat="@drawable/ic_profile_pic" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/headingProfileCard"
+        style="@style/Widget.Material3.CardView.Elevated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatarPic">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/headingProfile"
+                style="@style/HeadingSubTitle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/profile"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fullNameTitle"
+                style="@style/BodyContent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/full_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headingProfile" />
+
+            <TextView
+                android:id="@+id/fullNameContent"
+                style="@style/BodyTitle"
+                android:layout_width="180dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/fullNameTitle"
+                tools:text="Novia Dwi R" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fullNameTitle" />
+
+            <TextView
+                android:id="@+id/nisTitle"
+                style="@style/BodyContent"
+                android:layout_marginTop="16dp"
+                android:text="@string/nis"
+                app:layout_constraintStart_toStartOf="@+id/fullNameTitle"
+                app:layout_constraintTop_toBottomOf="@+id/dividerFullName" />
+
+            <TextView
+                android:id="@+id/nisContent"
+                style="@style/BodyTitle"
+                android:gravity="end"
+                app:layout_constraintEnd_toEndOf="@+id/fullNameContent"
+                app:layout_constraintTop_toTopOf="@+id/nisTitle"
+                tools:text="10389" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerNis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nisTitle" />
+
+            <TextView
+                android:id="@+id/kelasTitle"
+                style="@style/BodyContent"
+                android:layout_marginTop="16dp"
+                android:text="@string/kelas"
+                app:layout_constraintStart_toStartOf="@+id/nisTitle"
+                app:layout_constraintTop_toBottomOf="@+id/dividerNis" />
+
+            <TextView
+                android:id="@+id/kelasContent"
+                style="@style/BodyTitle"
+                android:gravity="end"
+                app:layout_constraintEnd_toEndOf="@+id/nisContent"
+                app:layout_constraintTop_toTopOf="@+id/kelasTitle"
+                tools:text="XI MIA 2" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerKelas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kelasTitle" />
+
+            <TextView
+                android:id="@+id/jurusanTitle"
+                style="@style/BodyContent"
+                android:layout_marginTop="16dp"
+                android:text="@string/jurusan"
+                app:layout_constraintStart_toStartOf="@+id/kelasTitle"
+                app:layout_constraintTop_toBottomOf="@+id/dividerKelas" />
+
+            <TextView
+                android:id="@+id/jurusanContent"
+                style="@style/BodyTitle"
+                android:gravity="end"
+                app:layout_constraintEnd_toEndOf="@+id/kelasContent"
+                app:layout_constraintTop_toTopOf="@+id/jurusanTitle"
+                tools:text="4" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerJurusan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/jurusanTitle" />
+
+            <TextView
+                android:id="@+id/emailTitle"
+                style="@style/BodyContent"
+                android:layout_marginTop="16dp"
+                android:text="@string/email"
+                app:layout_constraintStart_toStartOf="@+id/jurusanTitle"
+                app:layout_constraintTop_toBottomOf="@+id/dividerJurusan" />
+
+            <TextView
+                android:id="@+id/emailContent"
+                style="@style/BodyTitle"
+                android:gravity="end"
+                app:layout_constraintEnd_toEndOf="@+id/jurusanContent"
+                app:layout_constraintTop_toTopOf="@+id/emailTitle"
+                tools:text="novidwi@mail.com" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailTitle" />
+
+            <TextView
+                android:id="@+id/phoneTitle"
+                style="@style/BodyContent"
+                android:layout_marginTop="16dp"
+                android:text="@string/phone"
+                app:layout_constraintStart_toStartOf="@+id/emailTitle"
+                app:layout_constraintTop_toBottomOf="@+id/dividerEmail" />
+
+            <TextView
+                android:id="@+id/phoneContent"
+                style="@style/BodyTitle"
+                android:gravity="end"
+                app:layout_constraintEnd_toEndOf="@+id/emailContent"
+                app:layout_constraintTop_toTopOf="@+id/phoneTitle"
+                tools:text="0812 3456 7889" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardLoginAt"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneTitle"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.None">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/loginAtTitle"
+                        style="@style/BodySubTitle"
+                        android:text="@string/login_at"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/loginAtContent"
+                        style="@style/BodySubContent"
+                        android:gravity="end"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/loginAtTitle"
+                        tools:text="7 Mei 23" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/versionTitle"
+        style="@style/BodySubTitle"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/versi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/versionContent"
+        style="@style/BodySubContent"
+        android:layout_marginStart="8dp"
+        android:text="@string/_1_0_0"
+        app:layout_constraintBottom_toBottomOf="@+id/versionTitle"
+        app:layout_constraintStart_toEndOf="@+id/versionTitle"
+        app:layout_constraintTop_toTopOf="@+id/versionTitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

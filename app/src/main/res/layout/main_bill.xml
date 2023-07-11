@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionGroup="true"
+    tools:context=".ui.main.bill.BillFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        style="@style/CustomAppBar"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/billToolbar"
+            style="@style/CustomToolbar"
+            app:navigationIcon="@drawable/ic_arrow_back" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/titleProgressBillIndicator"
+        style="@style/TextAppearance.Material3.DisplayMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBillIndicator"
+        app:layout_constraintEnd_toEndOf="@+id/progressBillIndicator"
+        app:layout_constraintStart_toStartOf="@+id/progressBillIndicator"
+        app:layout_constraintTop_toTopOf="@+id/progressBillIndicator"
+        tools:text="70" />
+
+    <TextView
+        android:id="@+id/titleProgressBillIndicatorPercent"
+        style="@style/TextAppearance.Material3.BodyLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="-16dp"
+        android:text="@string/persen"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/titleProgressBillIndicator"
+        app:layout_constraintTop_toTopOf="@+id/titleProgressBillIndicator" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressBillIndicator"
+        style="@style/Widget.Material3.CircularProgressIndicator.Medium"
+        android:layout_width="156dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="24dp"
+        app:indicatorSize="172dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:showDelay="600"
+        app:trackColor="?attr/colorSurfaceVariant"
+        app:trackCornerRadius="16dp"
+        app:trackThickness="18dp" />
+
+    <TextView
+        android:id="@+id/headingBillTitle"
+        style="@style/HeadingTitle"
+        android:layout_marginTop="16dp"
+        android:text="@string/your_bill"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/progressBillIndicator"
+        app:layout_constraintStart_toStartOf="@+id/progressBillIndicator"
+        app:layout_constraintTop_toBottomOf="@+id/progressBillIndicator" />
+
+    <TextView
+        android:id="@+id/headingBillContent"
+        style="@style/BodyContent"
+        android:layout_width="256dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/bill_desc"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/headingBillTitle"
+        app:layout_constraintStart_toStartOf="@+id/headingBillTitle"
+        app:layout_constraintTop_toBottomOf="@+id/headingBillTitle" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        style="@style/Widget.Material3.CardView.Elevated"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headingBillContent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.None">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/hasDoneCard"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.None">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/hasDoneIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?attr/colorLeafContainer"
+                        app:contentPadding="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                        app:srcCompat="@drawable/ic_check_circle" />
+
+                    <TextView
+                        android:id="@+id/hasDoneTitle"
+                        style="@style/HeadingSubTitle"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/has_done"
+                        app:layout_constraintBottom_toBottomOf="@+id/hasDoneIcon"
+                        app:layout_constraintStart_toEndOf="@+id/hasDoneIcon"
+                        app:layout_constraintTop_toTopOf="@+id/hasDoneIcon" />
+
+                    <TextView
+                        android:id="@+id/hasDoneContent"
+                        style="@style/HeadingSubTitle"
+                        android:textColor="?attr/colorControlNormal"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/hasDoneIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/hasDoneIcon"
+                        tools:text="Rp. 140.000,00" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:dividerInsetStart="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hasDoneCard" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/notYetCard"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerCard"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.None">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/hasNotYetIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?attr/colorRoseContainer"
+                        app:contentPadding="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                        app:srcCompat="@drawable/ic_uncheck_circle" />
+
+                    <TextView
+                        android:id="@+id/notYetTitle"
+                        style="@style/HeadingSubTitle"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/has_done_yet"
+                        app:layout_constraintBottom_toBottomOf="@+id/hasNotYetIcon"
+                        app:layout_constraintStart_toEndOf="@+id/hasNotYetIcon"
+                        app:layout_constraintTop_toTopOf="@+id/hasNotYetIcon" />
+
+                    <TextView
+                        android:id="@+id/notYetContent"
+                        style="@style/HeadingSubTitle"
+                        android:textColor="?attr/colorControlNormal"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/notYetTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/notYetTitle"
+                        tools:text="Rp. 700.000,00" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

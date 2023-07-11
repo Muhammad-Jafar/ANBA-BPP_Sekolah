@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cardPending"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="?attr/colorSurfaceVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/buttonCardHeading"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:background="?attr/colorSurfaceVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardPending"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/loadingCardHeadingFirst"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/colorSurfaceVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCardHeading"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/loadingCardTitleFirst"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/colorSurfaceVariantCustom"
+        app:layout_constraintStart_toStartOf="@+id/loadingCardHeadingFirst"
+        app:layout_constraintTop_toTopOf="@+id/loadingCardHeadingFirst"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="170dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="4dp"
+        android:background="?attr/colorSurfaceVariantCustom"
+        app:layout_constraintStart_toStartOf="@+id/loadingCardTitleFirst"
+        app:layout_constraintTop_toBottomOf="@+id/loadingCardTitleFirst"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="90dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/colorSurfaceVariantCustom"
+        app:layout_constraintBottom_toBottomOf="@+id/loadingCardHeadingFirst"
+        app:layout_constraintEnd_toEndOf="@+id/loadingCardHeadingFirst"
+        app:layout_constraintTop_toTopOf="@+id/loadingCardHeadingFirst"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/loadingCardHeadingSecond"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/colorSurfaceVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loadingCardHeadingFirst"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/loadingCardTitleSecond"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/colorSurfaceVariantCustom"
+        app:layout_constraintStart_toStartOf="@+id/loadingCardHeadingSecond"
+        app:layout_constraintTop_toTopOf="@+id/loadingCardHeadingSecond"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="170dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="4dp"
+        android:background="?attr/colorSurfaceVariantCustom"
+        app:layout_constraintStart_toStartOf="@+id/loadingCardTitleSecond"
+        app:layout_constraintTop_toBottomOf="@+id/loadingCardTitleSecond"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="90dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/colorSurfaceVariantCustom"
+        app:layout_constraintBottom_toBottomOf="@+id/loadingCardHeadingSecond"
+        app:layout_constraintEnd_toEndOf="@+id/loadingCardHeadingSecond"
+        app:layout_constraintTop_toTopOf="@+id/loadingCardHeadingSecond"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/loadingCardHeadingThird"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/colorSurfaceVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loadingCardHeadingSecond"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/loadingCardTitleThird"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/colorSurfaceVariantCustom"
+        app:layout_constraintStart_toStartOf="@+id/loadingCardHeadingThird"
+        app:layout_constraintTop_toTopOf="@+id/loadingCardHeadingThird"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="170dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="4dp"
+        android:background="?attr/colorSurfaceVariantCustom"
+        app:layout_constraintStart_toStartOf="@+id/loadingCardTitleThird"
+        app:layout_constraintTop_toBottomOf="@+id/loadingCardTitleThird"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="90dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/colorSurfaceVariantCustom"
+        app:layout_constraintBottom_toBottomOf="@+id/loadingCardHeadingThird"
+        app:layout_constraintEnd_toEndOf="@+id/loadingCardHeadingThird"
+        app:layout_constraintTop_toTopOf="@+id/loadingCardHeadingThird"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

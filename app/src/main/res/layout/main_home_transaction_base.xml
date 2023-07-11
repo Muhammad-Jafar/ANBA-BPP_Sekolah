@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/main_home_transaction_loading" />
+
+    <include
+        android:id="@+id/content"
+        layout="@layout/main_home_transaction_latest"
+        android:visibility="gone" />
+
+    <ViewStub
+        android:id="@+id/error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/main_home_transaction_error" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

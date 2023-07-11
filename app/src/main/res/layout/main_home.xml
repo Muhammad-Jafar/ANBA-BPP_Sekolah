@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionGroup="true"
+    tools:context=".ui.main.home.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        style="@style/CustomAppBar"
+        android:background="?attr/colorSecondaryContainer"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/mainToolbar"
+            style="@style/CustomToolbar"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            app:title="@string/app_name" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/bgHeading"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-24dp"
+        android:background="?attr/colorSecondaryContainer"
+        app:layout_constraintBottom_toBottomOf="@id/headingCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Material3.Corner.Bottom" />
+
+    <TextView
+        android:id="@+id/nameUser"
+        style="@style/HeadingTitle"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        tools:text="Novia Dwi R" />
+
+    <TextView
+        android:id="@+id/nisTitle"
+        style="@style/BodyTitle"
+        android:text="@string/akronim_nis"
+        app:layout_constraintStart_toStartOf="@+id/nameUser"
+        app:layout_constraintTop_toBottomOf="@+id/nameUser" />
+
+    <TextView
+        android:id="@+id/nisContent"
+        style="@style/BodyTitle"
+        android:layout_marginStart="8dp"
+        android:text="@string/akronim_nis"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/nisTitle"
+        app:layout_constraintTop_toTopOf="@+id/nisTitle"
+        tools:text="103799" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/headingCard"
+        style="@style/Widget.Material3.CardView.Elevated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nisTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/billKomite"
+                style="@style/BodyTitle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/bill_komite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shimmerBill"
+                android:layout_width="140dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="-8dp"
+                android:background="?attr/colorSurfaceVariant"
+                app:layout_constraintStart_toStartOf="@+id/billNominal"
+                app:layout_constraintTop_toTopOf="@+id/billNominal"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small" />
+
+            <TextView
+                android:id="@+id/billNominal"
+                style="@style/HeadingSubTitle"
+                android:layout_marginTop="4dp"
+                android:text="@string/default_rupiah"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/billKomite"
+                app:layout_constraintTop_toBottomOf="@+id/billKomite" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerBillKomite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/billNominal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/billButton"
+                style="@style/CustomTextButton"
+                android:layout_height="60dp"
+                android:layout_marginTop="-4dp"
+                android:layout_marginBottom="-4dp"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:gravity="start|center"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:text="@string/see_bill"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerBillKomite" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <include
+        android:id="@+id/content"
+        layout="@layout/main_home_transaction_base"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bgHeading" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/payBillButton"
+        style="@style/CustomExtendedFab"
+        android:contentDescription="@string/pay_bill"
+        android:scrollbarFadeDuration="400"
+        android:text="@string/pay_bill"
+        app:icon="@drawable/ic_pay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

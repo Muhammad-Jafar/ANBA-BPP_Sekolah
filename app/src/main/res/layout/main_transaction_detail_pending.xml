@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/vaNumberCard"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/vaNumberTitle"
+                style="@style/HeadlineTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="78674745645" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerVaNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="-8dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="@+id/vaNumberTitle"
+                app:layout_constraintStart_toStartOf="@+id/vaNumberTitle"
+                app:layout_constraintTop_toBottomOf="@+id/vaNumberTitle" />
+
+            <TextView
+                android:id="@+id/vaNumberContent"
+                style="@style/BodyTitle"
+                android:layout_marginTop="8dp"
+                android:text="@string/va_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerVaNumber"
+                tools:text="Nomor Virtual Account" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/amountCard"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vaNumberCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/amountTitle"
+                style="@style/HeadingTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Rp 70.000,00" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="-8dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="@+id/amountTitle"
+                app:layout_constraintStart_toStartOf="@+id/amountTitle"
+                app:layout_constraintTop_toBottomOf="@+id/amountTitle" />
+
+            <TextView
+                android:id="@+id/amountContent"
+                style="@style/BodyTitle"
+                android:layout_marginTop="8dp"
+                android:text="@string/amount_nominal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerAmount"
+                tools:text="Nominal pembayaran" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/expireCard"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/expireTitle"
+                style="@style/HeadingSubTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="23 Jam 45 Menit 23 Detik" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerExpire"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="-8dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="@+id/expireTitle"
+                app:layout_constraintStart_toStartOf="@+id/expireTitle"
+                app:layout_constraintTop_toBottomOf="@+id/expireTitle" />
+
+            <TextView
+                android:id="@+id/expireContent"
+                style="@style/BodyTitle"
+                android:layout_marginTop="8dp"
+                android:text="@string/expire_time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerExpire"
+                tools:text="Tersisa waktu pembayaran" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

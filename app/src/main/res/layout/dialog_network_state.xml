@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:id="@+id/drag_handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha=".4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/illNoNetwork"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="-16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drag_handle"
+        app:srcCompat="@drawable/ill_sad_face" />
+
+    <TextView
+        android:id="@+id/noInternetTitle"
+        style="@style/HeadingSubTitle"
+        android:text="@string/no_internet_title"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/illNoNetwork"
+        app:layout_constraintStart_toStartOf="@+id/illNoNetwork"
+        app:layout_constraintTop_toBottomOf="@+id/illNoNetwork" />
+
+    <TextView
+        android:id="@+id/noInternetContent"
+        style="@style/BodyContent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/no_internet_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noInternetTitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirmExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/button_ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noInternetContent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/optionMenuButton"
+        android:icon="@drawable/ic_more"
+        android:title="@string/option_menu"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/profilButton"
+                android:icon="@drawable/ic_person"
+                android:orderInCategory="100"
+                android:title="@string/my_profile" />
+            <item
+                android:id="@+id/logoutButton"
+                android:icon="@drawable/ic_logout"
+                android:orderInCategory="100"
+                android:title="@string/logout" />
+        </menu>
+    </item>
+
+</menu>

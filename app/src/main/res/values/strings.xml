@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BPP Smanas</string>
+
+    <!-- Login Form -->
+    <string name="login">Login</string>
+    <string name="welcome">Selamat datang,</string>
+    <string name="email">Email</string>
+    <string name="akronim_nis">NIS</string>
+    <string name="password">Kata sandi</string>
+
+    <!-- Home form -->
+    <string name="option_menu">Pilihan menu</string>
+    <string name="logout">Keluar</string>
+    <string name="button_ok">OKE</string>
+    <string name="button_cancel">TIDAK</string>
+    <string name="anda_yakin_ingin_keluar">Anda yakin ingin keluar ?</string>
+    <string name="my_profile">Akun saya</string>
+    <string name="pay_bill">Bayar tagihan BPP</string>
+    <string name="bill_komite">Sisa tagihan BPP</string>
+    <string name="see_bill">Lihat lebih detail</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="kelas">Kelas</string>
+
+    <!-- Profile form -->
+    <string name="nis">Nomor induk siswa</string>
+    <string name="fill_data">Tidak boleh kosong</string>
+    <string name="fill_note">Catatan tidak boleh kosong</string>
+    <string name="fill_password">Sandi minimal 5 karakter</string>
+    <string name="app_desc">Aplikasi pembayaran BPP</string>
+    <string name="app_office">SMAN 1 ALAS</string>
+    <string name="profile">Biodata</string>
+    <string name="your_bill">Proses tagihan kamu</string>
+    <string name="login_failed">Login gagal</string>
+    <string name="login_at">Login pada</string>
+
+    <!-- Payment form -->
+    <string name="default_rupiah">Rp. 0,00</string>
+    <string name="jurusan">Jurusan</string>
+    <string name="phone">Kontak</string>
+
+    <string name="conn_failed">Koneksi gagal</string>
+    <string name="check_network_connection">Periksa internet anda</string>
+    <string name="button_try_again">Coba lagi</string>
+    <string name="email_invalid">Email tidak valid</string>
+
+    <string name="va_number">Nomor Virtual Account</string>
+    <string name="amount_nominal">Nominal pembayaran</string>
+    <string name="expire_time">Batas waktu pembayaran</string>
+    <string name="see_transaction">Lihat transaksi</string>
+
+    <string name="no_transaciton">Tidak ada transaksi</string>
+    <string name="no_transaction_desc">Transaksi yang anda buat akan muncul disini. Silahkan lakukan transaksi</string>
+    <string name="transaction_failed">Transaksi gagal</string>
+    <string name="nominal_pembayaran">Nominal pembayaran</string>
+    <string name="rp_70_000_00">Rp. 70.000,00</string>
+    <string name="untuk_1_bulan">Untuk 1 bulan</string>
+    <string name="rp_140_000_00">Rp. 140.000,00</string>
+    <string name="untuk_2_bulan">Untuk 2 bulan</string>
+    <string name="rp_210_000_00">Rp. 210.000,00</string>
+    <string name="untuk_3_bulan">Untuk 3 bulan</string>
+    <string name="rp_280_000_00">Rp. 280.000,00</string>
+    <string name="untuk_4_bulan">Untuk 4 bulan</string>
+    <string name="rp_420_000_00">Rp. 420.000,00</string>
+    <string name="untuk_1_semester">Untuk 1 semester</string>
+    <string name="rp_840_000_00">Rp. 840.000,00</string>
+    <string name="untuk_2_semester">Untuk 2 semester</string>
+    <string name="detail_pembayar">Detail pembayar</string>
+    <string name="nama_lengkap">Nama lengkap</string>
+    <string name="detail_transaksi">Detail transaksi</string>
+    <string name="nominal_tagihan">Nominal tagihan</string>
+    <string name="jangka_waktu">Jangka waktu</string>
+    <string name="metode_pembayaran">Metode pembayaran</string>
+    <string name="bni_virtual_account">BNI Virtual Account</string>
+    <string name="pembayaran">Pembayaran</string>
+    <string name="payment_method_desc">* Metode pembayaran yang tersedia saat ini adalah menggunakan BNI VA</string>
+    <string name="catatan">Catatan</string>
+    <string name="tambah_catatan">Tambah catatan</string>
+    <string name="total_pembayaran">Total pembayaran</string>
+    <string name="lanjutkan">Lanjutkan</string>
+    <string name="selamat">SELAMAT !</string>
+    <string name="permintaan_pembayaran_berhasil_dibuat">Permintaan pembayaran berhasil dibuat.</string>
+    <string name="berikut_nomor_virtual_account_untuk_menyelesaikan_pembayaran_anda">Berikut nomor Virtual Account untuk menyelesaikan pembayaran anda:</string>
+    <string name="dengan_jumlah_pembayaran_sebesar">Dengan jumlah pembayaran sebesar</string>
+    <string name="expire_limit_time">Batas waktu pembayaran adalah 1 Hari</string>
+    <string name="expire_desc">Terhitung sejak menerima nomor VA untuk menyelesaikan pembayaran</string>
+    <string name="kembali_ke_home">Kembali ke Home</string>
+    <string name="informasi_pembayaran">Informasi pembayaran</string>
+    <string name="nama_pembayar">Nama pembayar</string>
+    <string name="jumlah_pembayaran">Jumlah pembayaran</string>
+    <string name="di_bayarkan_pada">Di bayarkan pada</string>
+    <string name="total">Total</string>
+    <string name="batalkan">Batalkan</string>
+    <string name="konfirmasi">Konfirmasi</string>
+    <string name="no_data_found">No data found</string>
+    <string name="bill_desc">Uang BPP yang kamu bayarkan sudah termasuk dalam memfasilitasi kamu selama belajar di sekolah.</string>
+    <string name="has_done">Telah lunas</string>
+    <string name="has_done_yet">Belum lunas</string>
+    <string name="persen">%</string>
+    <string name="versi">Versi</string>
+    <string name="_1_0_0">1.0.0</string>
+
+
+    <string name="lunas_desc">Terimakasih, anda telah melunasi pembayaran tagihan uang BPP</string>
+    <string name="lunas_title">Tagihan Lunas</string>
+    <string name="no_internet_title">Gagal terhubung</string>
+    <string name="no_internet_content">Silahkan periksa dan pastikan kondisi internet anda aktif.</string>
+    <string name="pay_bill_desc">Lakukan pembayaran tagihan BPP anda tepat waktu.</string>
+    <string name="waiting">Tunggu sebentar..</string>
+    <string name="confirm_nominal_payment">Sisa tagihan anda kurang dari nominal yang dipilih</string>
+    <string name="status_pending">Pending</string>
+    <string name="status_approved">Approved</string>
+    <string name="status_rejected">Rejected</string>
+
+    <string name="session_expire_title">Sesi login berakhir</string>
+    <string name="session_expire_desc">Sesi anda telah berakhir, silahkan login kembali</string>
+    <string name="transaction_code_title">Kode transaksi</string>
+    <string name="tanggal_transaksi">Tanggal transaksi</string>
+    <string name="status_pembayaran">Status pembayaran</string>
+</resources>

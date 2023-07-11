@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/main_transaction_detail">
+
+    <TextView
+        android:id="@+id/transCodeTitle"
+        style="@style/BodyContent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/transaction_code_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/transCodeContent"
+        style="@style/BodyTitle"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/transCodeTitle"
+        tools:text="TRANS-edk32" />
+
+    <TextView
+        android:id="@+id/amountTitle"
+        style="@style/BodyContent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/nominal_pembayaran"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transCodeTitle" />
+
+    <TextView
+        android:id="@+id/amountContent"
+        style="@style/BodyTitle"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/amountTitle"
+        tools:text="Rp. 70.000,00" />
+
+    <TextView
+        android:id="@+id/dateTitle"
+        style="@style/BodyContent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tanggal_transaksi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountTitle" />
+
+    <TextView
+        android:id="@+id/dateContent"
+        style="@style/BodyTitle"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dateTitle"
+        tools:text="11 Juli 2023" />
+
+    <TextView
+        android:id="@+id/statusTitle"
+        style="@style/BodyContent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/status_pembayaran"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTitle" />
+
+    <TextView
+        android:id="@+id/statusContent"
+        style="@style/BodyTitle"
+        android:textStyle="bold"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/statusTitle"
+        tools:text="APPROVED" />
+
+    <TextView
+        android:id="@+id/noteTitle"
+        style="@style/BodyContent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Catatan pembayaran"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusTitle" />
+
+    <TextView
+        android:id="@+id/noteContent"
+        style="@style/BodySubContent"
+        android:layout_width="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteTitle"
+        tools:text="TIDAK ADA CATATAN " />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

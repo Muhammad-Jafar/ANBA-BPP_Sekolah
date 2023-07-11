@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionGroup="true"
+    tools:context=".ui.main.payment.ConfirmPaymentFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        style="@style/CustomAppBar"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/confirmToolbar"
+            style="@style/CustomToolbar"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="Konfirmasi Pembayaran" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerColor="?attr/colorSurfaceVariant" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:isScrollContainer="true"
+        app:layout_constraintBottom_toTopOf="@+id/confirmCard"
+        app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/detailPembayarCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/detailPembayarHeading"
+                        style="@style/HeadingSubTitle"
+                        android:text="@string/detail_pembayar"
+                        android:textColor="?attr/colorControlNormal"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/pembayarTitle"
+                        style="@style/BodyContent"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/nama_lengkap"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/detailPembayarHeading" />
+
+                    <TextView
+                        android:id="@+id/pembayarContent"
+                        style="@style/BodyTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/pembayarTitle"
+                        tools:text="Susanto" />
+
+                    <TextView
+                        android:id="@+id/emailTitle"
+                        style="@style/BodyContent"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/email"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pembayarTitle" />
+
+                    <TextView
+                        android:id="@+id/emailContent"
+                        style="@style/BodyTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/emailTitle"
+                        tools:text="susanto@gmail.com" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/detailTagihanCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailPembayarCard">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/detailTagihanHeading"
+                        style="@style/HeadingSubTitle"
+                        android:text="@string/detail_transaksi"
+                        android:textColor="?attr/colorControlNormal"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tagihanTitle"
+                        style="@style/BodyContent"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/nominal_tagihan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/detailTagihanHeading" />
+
+                    <TextView
+                        android:id="@+id/tagihanContent"
+                        style="@style/BodyTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tagihanTitle"
+                        tools:text="Rp. 70.000,00" />
+
+                    <TextView
+                        android:id="@+id/waktuTitle"
+                        style="@style/BodyContent"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/jangka_waktu"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tagihanTitle" />
+
+                    <TextView
+                        android:id="@+id/waktuContent"
+                        style="@style/BodyTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/waktuTitle"
+                        tools:text="1 Bulan" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/paymentMethodCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailTagihanCard">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/paymentMethodHeading"
+                        style="@style/HeadingSubTitle"
+                        android:text="@string/metode_pembayaran"
+                        android:textColor="?attr/colorControlNormal"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/methodTitle"
+                        style="@style/BodyContent"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/pembayaran"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/paymentMethodHeading" />
+
+                    <TextView
+                        android:id="@+id/methodContent"
+                        style="@style/BodyTitle"
+                        android:text="@string/bni_virtual_account"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/methodTitle" />
+
+                    <TextView
+                        android:id="@+id/notePaymentMethod"
+                        style="@style/BodySubContent"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/payment_method_desc"
+                        android:textSize="11sp"
+                        android:textStyle="italic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/methodTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/inputAmountTitle"
+                style="@style/BodyTitle"
+                android:layout_marginTop="24dp"
+                android:text="@string/catatan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paymentMethodCard" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputNoteLayout"
+                style="@style/CustomInputLayout"
+                android:layout_marginTop="8dp"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputAmountTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputNote"
+                    style="@style/CustomInputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/tambah_catatan"
+                    android:imeOptions="actionGo"
+                    android:inputType="textCapSentences|textMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/confirmCard"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.None">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/totalTitle"
+                style="@style/BodyTitle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/total_pembayaran"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalContent"
+                style="@style/HeadingSubTitle"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalTitle"
+                tools:text="Rp. 70.000,00" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/doPay"
+                style="@style/CustomFilledButton"
+                android:layout_width="156dp"
+                android:text="@string/lanjutkan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
